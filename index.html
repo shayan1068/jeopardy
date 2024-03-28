@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Jeopardy</title>
+  <link href="https://fonts.googleapis.com/css?family=Copse&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+  <link rel="stylesheet" href="jeopardy.css">
+  <style>
+    #loading {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="jeopardy-game">
+    <button id="start">Start Game</button>
+    <div id="loading">Loading...</div>
+    <table id="jeopardy">
+      <thead>
+        <tr id="categories"></tr>
+      </thead>
+      <tbody id="clues"></tbody>
+    </table>
+    <button id="restart" class="d-none">Restart Game</button>
+  </div>
+
+  <script src="https://unpkg.com/jquery"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="https://unpkg.com/lodash"></script>
+  <script src="jeopardy.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+
+#jeopardy {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+#jeopardy th, #jeopardy td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: white;
+}
+
+#jeopardy thead {
+  background-color: #115ff4; 
+}
+
+#jeopardy th {
+  background: linear-gradient(180deg, #060ce9, #115ff4);
+}
+
+#jeopardy tbody tr:nth-child(odd) td {
+  background-color: #28a200; 
+}
+
+#jeopardy tbody tr:nth-child(even) td {
+  background-color: #8d2ab5;
+}
+@media screen and (max-width: 600px) {
+  #jeopardy thead {
+    display: none;
+  }
+
+  #jeopardy, #jeopardy tbody, #jeopardy tr, #jeopardy td {
+    display: block;
+    width: 100%;
+  }
+
+  #jeopardy td {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  #jeopardy td::before {
+    content: attr(data-label); 
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+}
+#jeopardy tbody tr:hover {
+  background-color: #74119c; 
+}
+.d-none{
+  display: none;
+}
